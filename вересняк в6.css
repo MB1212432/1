@@ -25,7 +25,7 @@ body {
     left: 0;
     width: 100%;
     min-height: 75px;
-    background: linear-gradient(135deg, #702525, #882f2f, #a64242);
+    background: linear-gradient(135deg, #7f1d1d 0%, #b91c1c 50%, #dc2626 100%);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
@@ -47,12 +47,11 @@ body {
     font-weight: bold;
     text-decoration: none;
     white-space: nowrap;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .logo:hover {
     color: #ffe08a;
-    transform: scale(1.05);
     text-decoration: none;
 }
 
@@ -70,7 +69,7 @@ body {
     list-style: none;
 }
 
-.nav-list a {
+.site-header nav a {
     display: block;
     padding: 8px 12px;
     color: #ffffff;
@@ -82,10 +81,10 @@ body {
                 color 0.3s ease;
 }
 
-.nav-list a:hover {
-    color: #050505;
-    background-color: #ffe08a;
-    text-shadow: 0 0 8px rgba(255, 224, 138, 0.5);
+.site-header nav a:hover {
+    color: #ffffff;
+    background-color: #882f2f;
+    text-shadow: 0 0 8px rgba(255, 224, 138, 0.8);
     transform: translateY(-2px);
     text-decoration: none;
 }
@@ -96,39 +95,6 @@ body {
     padding: 20px 15px;
 }
 
-.hero-section {
-    background: linear-gradient(
-        135deg,
-        #702525 0%,
-        #882f2f 50%,
-        #a64242 100%
-    );
-    color: #ffffff;
-    padding: 45px 20px;
-    margin-bottom: 30px;
-    border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(136, 47, 47, 0.25);
-}
-
-.hero-section h1 {
-    color: #ffffff;
-    font-size: 36px;
-    margin-bottom: 15px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
-}
-
-.hero-section p {
-    color: #fff8dc;
-    font-size: 18px;
-}
-
-section {
-    background-color: transparent;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    scroll-margin-top: 90px;
-}
-
 .card {
     position: relative;
     background-color: #ffffff;
@@ -136,13 +102,11 @@ section {
     border: 1px solid #e0d9bd;
     border-radius: 8px;
     margin-bottom: 25px;
-    box-shadow:
-        0 4px 6px -1px rgba(0, 0, 0, 0.1),
-        0 2px 4px -2px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                0 2px 4px -2px rgba(0, 0, 0, 0.06);
     transition: transform 0.3s ease,
                 box-shadow 0.3s ease,
-                background-color 0.3s ease,
-                color 0.3s ease;
+                background-color 0.3s ease;
 }
 
 .card:hover {
@@ -150,19 +114,30 @@ section {
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
 }
 
+section {
+    background-color: #fffab8;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    scroll-margin-top: 90px;
+}
+
 h1 {
     margin-bottom: 15px;
+    padding: 18px;
     font-size: 36px;
     font-weight: 700;
-    color: #ff0000;
+    color: #ffffff;
     text-align: center;
+    background: linear-gradient(135deg, #7f1d1d 0%, #b91c1c 50%, #dc2626 100%);
+    border-radius: 8px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
 }
 
 h2 {
     margin-bottom: 20px;
     font-size: 28px;
     font-weight: 700;
-    color: #ff0008;
+    color: #b91c1c;
     text-align: center;
 }
 
@@ -170,7 +145,7 @@ h3 {
     margin: 20px 0 10px;
     font-size: 22px;
     font-weight: 600;
-    color: #ff0000;
+    color: #882f2f;
     text-align: center;
 }
 
@@ -197,9 +172,8 @@ em {
 }
 
 a {
-    color: #3d2899;
+    color: #882f2f;
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
 a:hover {
@@ -231,13 +205,13 @@ a:hover {
     display: block;
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 6px;
     object-fit: cover;
     transition: transform 0.4s ease-out;
 }
 
 .main-image-wrapper:hover .main-image {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
 .badge {
@@ -247,7 +221,7 @@ a:hover {
     z-index: 2;
     padding: 6px 14px;
     color: #ffffff;
-    background: linear-gradient(to right, #882f2f, #d30000);
+    background-color: #b91c1c;
     border-radius: 20px;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
     font-size: 13px;
@@ -268,12 +242,12 @@ table {
 th,
 td {
     padding: 10px 12px;
-    border: 1px solid #e0d9bd;
+    border: 1px solid #ccc;
 }
 
 th {
-    color: #050505;
-    background: linear-gradient(to right, #ffe08a, #ffedb0);
+    color: #ffffff;
+    background-color: #882f2f;
 }
 
 tbody tr:nth-child(even) {
@@ -282,7 +256,6 @@ tbody tr:nth-child(even) {
 
 tbody tr:hover {
     background-color: #ffedb0;
-    transition: background-color 0.3s ease;
 }
 
 .grid-gallery {
@@ -296,14 +269,14 @@ tbody tr:hover {
     min-width: 0;
     padding: 10px;
     background-color: #ffffff;
-    border: 2px solid #e0d9bd;
+    border: 2px solid #e0e0e0;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow:
-        0 4px 6px -1px rgba(0, 0, 0, 0.1),
-        0 2px 4px -2px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                0 2px 4px -2px rgba(0, 0, 0, 0.06);
     transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
+                box-shadow 0.3s ease,
+                background-color 0.3s ease;
 }
 
 .gallery-item:hover {
@@ -327,28 +300,6 @@ tbody tr:hover {
 .gallery-item p {
     margin: 10px 0 0;
     font-weight: bold;
-}
-
-aside {
-    margin: 20px 0;
-    padding: 20px;
-    background: radial-gradient(
-        circle at top left,
-        #fffdf0,
-        #fff8dc
-    );
-    border-left: 5px solid #882f2f;
-    border-radius: 8px;
-    font-size: 15px;
-    font-style: italic;
-    text-align: left;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
-}
-
-aside h2 {
-    margin-bottom: 10px;
-    font-size: 20px;
-    text-align: left;
 }
 
 #contact {
@@ -384,15 +335,13 @@ aside h2 {
     display: block;
     width: 100%;
     padding: 10px;
-    border: 1px solid #e0d9bd;
+    border: 1px solid #ccc;
     border-radius: 6px;
     background-color: #ffffff;
     color: #050505;
     font-family: Arial, sans-serif;
     font-size: 16px;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
-    transition: border-color 0.3s ease,
-                box-shadow 0.3s ease;
 }
 
 #contact textarea {
@@ -403,9 +352,9 @@ aside h2 {
 #contact input:focus,
 #contact select:focus,
 #contact textarea:focus {
-    border-color: #882f2f;
+    border-color: #d97706;
     outline: none;
-    box-shadow: 0 0 0 3px rgba(136, 47, 47, 0.2);
+    box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.2);
 }
 
 #contact .radio-group,
@@ -450,9 +399,9 @@ aside h2 {
     display: block;
     width: 100%;
     padding: 12px 20px;
-    background-image: linear-gradient(to right, #702525, #a64242);
     border: none;
     border-radius: 8px;
+    background-image: linear-gradient(to right, #882f2f, #d97706);
     color: #ffffff;
     font-size: 16px;
     font-weight: bold;
@@ -465,8 +414,6 @@ aside h2 {
 }
 
 #contact button[type="submit"]:hover {
-    background-image: linear-gradient(to right, #ffe08a, #ffedb0);
-    color: #050505;
     transform: translateY(-3px);
     box-shadow: 0 10px 15px -3px rgba(136, 47, 47, 0.35);
 }
@@ -476,14 +423,14 @@ aside h2 {
 }
 
 #contact button[type="submit"]:focus-visible {
-    outline: 3px solid #3d2899;
+    outline: 3px solid #d97706;
     outline-offset: 3px;
 }
 
 .site-footer {
     padding: 25px 15px;
     color: #ffffff;
-    background: linear-gradient(135deg, #702525, #882f2f);
+    background: linear-gradient(135deg, #7f1d1d, #b91c1c, #dc2626);
 }
 
 .site-footer p {
@@ -492,10 +439,14 @@ aside h2 {
 
 .site-footer a {
     color: #ffe08a;
+    transition: color 0.3s ease;
 }
 
-.back-to-top,
-.btn-top {
+.site-footer a:hover {
+    color: #ffffff;
+}
+
+.back-to-top {
     position: fixed;
     right: 25px;
     bottom: 25px;
@@ -507,7 +458,7 @@ aside h2 {
     height: 50px;
     border-radius: 50%;
     color: #ffffff;
-    background-image: linear-gradient(to right, #702525, #a64242);
+    background-image: linear-gradient(135deg, #882f2f, #d97706);
     font-size: 28px;
     font-weight: bold;
     text-decoration: none;
@@ -518,13 +469,11 @@ aside h2 {
                 color 0.3s ease;
 }
 
-.back-to-top:hover,
-.btn-top:hover {
-    color: #050505;
-    background-image: linear-gradient(to right, #ffe08a, #ffedb0);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(136, 47, 47, 0.35);
+.back-to-top:hover {
+    color: #ffffff;
+    box-shadow: 0 10px 15px -3px rgba(136, 47, 47, 0.35);
     text-decoration: none;
+    transform: translateY(-4px);
 }
 
 @media (max-width: 800px) {
@@ -630,8 +579,7 @@ aside h2 {
         font-size: 15px;
     }
 
-    .back-to-top,
-    .btn-top {
+    .back-to-top {
         right: 15px;
         bottom: 15px;
         width: 45px;
@@ -649,7 +597,24 @@ footer {
     display: block;
 }
 
+aside {
+    margin: 20px 0;
+    padding: 15px 20px;
+    background: radial-gradient(circle at top left, #fff7ed, #ffe08a);
+    border-left: 5px solid #882f2f;
+    border-radius: 8px;
+    font-size: 15px;
+    font-style: italic;
+    text-align: left;
+}
+
+aside h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: left;
+}
+
 a:focus-visible {
-    outline: 3px solid #3d2899;
+    outline: 3px solid #d97706;
     outline-offset: 3px;
 }
