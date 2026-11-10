@@ -17,6 +17,13 @@ body {
     color: #050505;
     line-height: 1.6;
     text-align: center;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .site-header {
@@ -70,7 +77,10 @@ body {
 }
 
 .site-header nav a {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
     padding: 8px 12px;
     color: #ffffff;
     border-radius: 6px;
@@ -90,6 +100,7 @@ body {
 }
 
 .container {
+    width: 100%;
     max-width: 900px;
     margin: 0 auto;
     padding: 20px 15px;
@@ -97,6 +108,7 @@ body {
 
 .card {
     position: relative;
+    width: 100%;
     background-color: #ffffff;
     padding: 25px;
     border: 1px solid #e0d9bd;
@@ -116,9 +128,8 @@ body {
 
 section {
     background-color: #fffab8;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    scroll-margin-top: 90px;
+    padding: 30px 20px;
+    scroll-margin-top: 100px;
 }
 
 h1 {
@@ -131,6 +142,7 @@ h1 {
     background: linear-gradient(135deg, #7f1d1d 0%, #b91c1c 50%, #dc2626 100%);
     border-radius: 8px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+    overflow-wrap: break-word;
 }
 
 h2 {
@@ -196,6 +208,7 @@ a:hover {
 .main-image-wrapper {
     position: relative;
     max-width: 500px;
+    width: 100%;
     margin: 20px auto;
     overflow: hidden;
     border-radius: 8px;
@@ -267,6 +280,7 @@ tbody tr:hover {
 
 .gallery-item {
     min-width: 0;
+    width: 100%;
     padding: 10px;
     background-color: #ffffff;
     border: 2px solid #e0e0e0;
@@ -308,6 +322,7 @@ tbody tr:hover {
 
 #contact form {
     display: block;
+    width: 100%;
     max-width: 600px;
     margin: 0 auto;
     padding: 25px;
@@ -398,6 +413,7 @@ tbody tr:hover {
 #contact button[type="submit"] {
     display: block;
     width: 100%;
+    min-height: 44px;
     padding: 12px 20px;
     border: none;
     border-radius: 8px;
@@ -476,117 +492,6 @@ tbody tr:hover {
     transform: translateY(-4px);
 }
 
-@media (max-width: 800px) {
-    body {
-        padding-top: 125px;
-    }
-
-    html {
-        scroll-padding-top: 135px;
-    }
-
-    .header-container {
-        flex-direction: column;
-        justify-content: center;
-        gap: 5px;
-        padding: 8px 10px;
-    }
-
-    .site-header,
-    .header-container {
-        min-height: auto;
-    }
-
-    .logo {
-        font-size: 21px;
-    }
-
-    .nav-list {
-        flex-wrap: wrap;
-        gap: 3px;
-    }
-
-    .nav-list a {
-        padding: 6px 8px;
-        font-size: 14px;
-    }
-
-    .grid-gallery {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    h1 {
-        font-size: 30px;
-    }
-
-    h2 {
-        font-size: 25px;
-    }
-}
-
-@media (max-width: 500px) {
-    body {
-        padding-top: 150px;
-    }
-
-    html {
-        scroll-padding-top: 155px;
-    }
-
-    .container {
-        padding: 15px 10px;
-    }
-
-    .card {
-        padding: 18px 12px;
-    }
-
-    .grid-gallery {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery-item img {
-        height: 220px;
-    }
-
-    .intro {
-        font-size: 17px;
-    }
-
-    h1 {
-        font-size: 27px;
-    }
-
-    h2 {
-        font-size: 23px;
-    }
-
-    h3 {
-        font-size: 20px;
-    }
-
-    th,
-    td {
-        padding: 8px;
-        font-size: 14px;
-    }
-
-    #contact form {
-        padding: 18px 12px;
-    }
-
-    #contact button[type="submit"] {
-        font-size: 15px;
-    }
-
-    .back-to-top {
-        right: 15px;
-        bottom: 15px;
-        width: 45px;
-        height: 45px;
-    }
-}
-
 header,
 nav,
 main,
@@ -617,4 +522,228 @@ aside h2 {
 a:focus-visible {
     outline: 3px solid #d97706;
     outline-offset: 3px;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 900px;
+    }
+
+    .grid-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    section {
+        padding: 50px 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 135px;
+    }
+
+    html {
+        scroll-padding-top: 145px;
+    }
+
+    .site-header,
+    .header-container {
+        min-height: auto;
+    }
+
+    .header-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .site-header nav a {
+        min-height: 44px;
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .grid-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item {
+        width: 100%;
+    }
+
+    .gallery-item img {
+        height: 220px;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #contact form {
+        width: 100%;
+        padding: 20px 15px;
+    }
+
+    #contact .radio-group {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #contact .checkbox-group {
+        align-items: flex-start;
+    }
+
+    #contact button[type="submit"] {
+        min-height: 44px;
+    }
+
+    .back-to-top {
+        width: 44px;
+        height: 44px;
+    }
+
+    section {
+        padding: 35px 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding-top: 150px;
+    }
+
+    html {
+        scroll-padding-top: 160px;
+    }
+
+    .container {
+        padding: 15px 10px;
+    }
+
+    .card {
+        padding: 18px 12px;
+    }
+
+    section {
+        padding: 25px 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+        padding: 14px 8px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .intro {
+        font-size: 17px;
+    }
+
+    .nav-list {
+        gap: 5px;
+    }
+
+    .site-header nav a {
+        padding: 6px 8px;
+        font-size: 13px;
+    }
+
+    .grid-gallery {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .gallery-item img {
+        height: 200px;
+    }
+
+    .badge {
+        top: 8px;
+        right: 8px;
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 550px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    #contact form {
+        width: 100%;
+        padding: 15px 10px;
+    }
+
+    #contact .radio-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    #contact .checkbox-group {
+        align-items: flex-start;
+    }
+
+    #contact button[type="submit"] {
+        min-height: 44px;
+        font-size: 15px;
+    }
+
+    .back-to-top {
+        right: 15px;
+        bottom: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 23px;
+    }
+
+    aside {
+        padding: 12px;
+        font-size: 14px;
+    }
 }
